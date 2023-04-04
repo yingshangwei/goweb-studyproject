@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title></title>
+</head>
+
+<style>
+    /* Keyword value/name of color */
+    .article-content {
+        background-color: yellow;
+        margin:5px;border:0;padding:0;
+    }
+
+    /* Hexadecimal value */
+    .article-replies-reply {
+        background-color: green;
+        margin:5px;border:0;padding:0;
+    }
+
+
+</style>
+
+<body>
+<div class="article">
+    <div class="article-content">
+
+        <h4>{{.Title}}</h4>
+        {{.Content}}
+        <!--{{range $i, $v := .Articles}}
+            {{$v}}
+        {{end}}-->
+        <!--<div class="article-card-article">
+            <div class="article-card-article-head">
+                <div class="article-card-article-head-info">
+                    yswdra | 2022.3.4 | 213回复
+                </div>
+                <div>
+                    <b>山高水远</b>
+                    <p></p>
+                </div>
+            </div>
+            <a href="https://www.bilibili.com/" target="_blank">活动攻略已完结，活动即将结束，旅行者注意领取奖励！</a>
+        </div>-->
+
+    </div>
+    <div class="article-replies">
+
+        <div class="article-replies-card">
+            {{.Replies}}
+        </div>
+
+        <div class="bottom">
+            <form action="{{.URL}}" method="post">
+                <input type="text", name="reply-content">
+                <input type="submit", value="回复">
+            </form>
+            <form>
+                <input type="submit", value="上一页">
+            </form>
+            <form>
+                <input type="submit", value="下一页">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
